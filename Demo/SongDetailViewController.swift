@@ -18,7 +18,7 @@ class SongDetailViewController: UIViewController {
         self.song = song
         super.init(coder: coder)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError()
     }

@@ -23,9 +23,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="YiU-yK-H1Z" kind="show" destinationCreationSelector="showDetailWithCoder:sender:segueIdentifier:" id="UM5-os-w6P"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +39,7 @@
         <!--Song Detail View Controller-->
         <scene sceneID="hG2-Ur-s4d">
             <objects>
-                <viewController id="YiU-yK-H1Z" customClass="SongDetailViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongDetail" id="YiU-yK-H1Z" customClass="SongDetailViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l01-Df-qrQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

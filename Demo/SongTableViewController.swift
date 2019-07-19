@@ -49,15 +49,16 @@ class SongTableViewController: UITableViewController {
         dataSource.apply(snapShot, animatingDifferences: false)
     }
 
-    
-    
-    @IBSegueAction func showDetail(coder: NSCoder, sender: Any?, segueIdentifier: String?) -> SongDetailViewController? {
-        if let row = tableView.indexPathForSelectedRow?.row {
-            let song = songs[row]
-            return SongDetailViewController(coder: coder, song: song)
-        } else {
-            return nil 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let song = songs[indexPath.row]
+        
+        if let detailController = storyboard?.instantiateViewController(identifier: "SongDetail", creator: { coder in
+            SongDetailViewController(coder: coder, song: song)
+        }) {
+            show(detailController, sender: nil)
         }
+        
     }
-
+    
+   
 }
